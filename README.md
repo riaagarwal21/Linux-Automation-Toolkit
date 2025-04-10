@@ -20,6 +20,18 @@ A modular, command-line Python toolkit designed to automate essential Linux syst
 
 ---
 
+## 📌 Real-World Scenarios
+
+Imagine you're given with the responsibility of maintaining 'n' numbers of Linux-based computers to keep systems running smoothly, monitor usage, 
+and create regular backups - all without enterprise tools.
+This is where this toolkit helps:
+- Regularly checks `CPU`, `RAM`, and `disk usage` with one command, identifying overloaded or failing systems.
+- `Network command` ensures all devices are online and their DNS/gateway configs are correct.
+- `Port scanner` finds unnecessary open ports and secures the systems.
+- Automate daily `backups` of important logs and scripts using the backup tool.
+
+---
+
 ## 📁 Project Structure
 
 ```
@@ -72,11 +84,12 @@ python3 toolkit.py --help
 
 Open your project root and use the following commands:
 ```
-make run             # Runs the CLI toolkit with --help to show available commands.
-make test            # Runs all unit tests using pytest.
-make coverage        # Runs tests and generates an HTML coverage report.
-make coverage-view   # Opens the generated coverage report in Chromium browser (Linux systems).
-make clean           # Cleans up __pycache__, .pytest_cache, and htmlcov directories.
+make run                               # Runs the CLI toolkit with --help to show available commands.
+make test                              # Runs all unit tests using pytest.
+make coverage                          # Runs tests and generates an HTML coverage report.
+make coverage-view                     # Opens the generated coverage report in Chromium browser (Linux systems).
+make backup source=<path> dest=<path>  # Calls the backup module through toolkit.py and zips the content of source directory.
+make clean                             # Cleans up __pycache__, .pytest_cache, and htmlcov directories.
 ```
 
 If you're running for the first time:
