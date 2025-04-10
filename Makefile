@@ -18,6 +18,11 @@ coverage:
 coverage-view:
 	chromium-browser htmlcov/index.html
 
+# Backup a directory to a ZIP file
+# Usage: make backup source=/path/to/source dest=/path/to/destination
+backup:
+	python3 toolkit.py backup $(source) --dest $(dest)
+
 # Clean up cache and coverage files
 clean:
 	find . -type d -name "__pycache__" -exec rm -r {} +
